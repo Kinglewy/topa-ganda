@@ -10,13 +10,14 @@ FILES
   products.html         Product catalogue (15 products + chia range)
   impact.html           Impact & results
   gallery.html          Photo gallery with lightbox
+  events.html           Upcoming & past events (trainings, field days, launches)
   get-involved.html     Ways to get involved + form
   contact.html          Contact details, form, map, FAQ
   404.html              "Page not found" page
   assets/css/style.css  All styling (colours are at the top, under :root)
   assets/js/main.js     All animations and interactions
   assets/img/           Photos (WebP), logo (assets/img/brand/), icons
-  contact.php           Sends form messages to info@topaorganicuganda.org (needs PHP hosting)
+  contact.php           Sends form messages to topauganda@gmail.com (needs PHP hosting)
   .htaccess             HTTPS, redirects from old site URLs, caching (Apache/cPanel; hidden file)
   sitemap.xml, robots.txt, site.webmanifest
 
@@ -26,6 +27,8 @@ EDITING
   use Find & Replace across all .html files.
   To change a photo, put the new image in assets/img/ and update the src="" (and srcset="") of that <img>.
   To add a product, copy one <article class="product ..."> block in products.html and edit it.
+  To add an event, copy one <article class="event ..."> block in events.html and edit it.
+  Set data-date="YYYY-MM-DD". Events move to "Past events" by themselves once the date passes.
 
 GOING LIVE (cPanel)
   1. Back up and remove the old WordPress files from public_html.

@@ -231,7 +231,7 @@
           var body = [];
           data.forEach(function (v, k) { if (k !== "website" && k !== "form") body.push(k.charAt(0).toUpperCase() + k.slice(1) + ": " + v); });
           var subj = (data.get("subject") || data.get("interest") || "Website enquiry");
-          window.location.href = "mailto:info@topaorganicuganda.org?subject=" + encodeURIComponent("[Website] " + subj) + "&body=" + encodeURIComponent(body.join("\n"));
+          window.location.href = "mailto:topauganda@gmail.com?subject=" + encodeURIComponent("[Website] " + subj) + "&body=" + encodeURIComponent(body.join("\n"));
           status.className = "form-status ok"; status.textContent = "Opening your email app to send this message…";
         })
         .then(function () { if (btn) { btn.disabled = false; btn.innerHTML = label; } });

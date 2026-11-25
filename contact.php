@@ -7,7 +7,7 @@
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
 
-$TO = 'info@topaorganicuganda.org';          // where messages are delivered
+$TO = 'topauganda@gmail.com';          // where messages are delivered
 $FROM = 'website@topaorganicuganda.org';     // must be an address on this domain
 
 function out($ok, $msg, $code = 200) { http_response_code($code); echo json_encode(['ok' => $ok, 'message' => $msg, 'error' => $ok ? null : $msg]); exit; }

@@ -642,3 +642,28 @@ blockquote { margin: 0; }
   .menu-open .header .logo__img--dark { display: none; }
   .menu-open .header .logo__img--light { display: block; filter: none; }
 }
+
+/* ---------- Events ---------- */
+.events { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 24px; }
+.event { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; transition: transform .6s var(--ease), box-shadow .6s var(--ease); }
+.event:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.event__media { aspect-ratio: 16 / 10; overflow: hidden; background: var(--cream-200); }
+.event__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); }
+.event:hover .event__media img { transform: scale(1.05); }
+.event__body { position: relative; display: flex; flex-direction: column; gap: 12px; padding: 28px 26px 26px; flex: 1; }
+.event__date { position: absolute; top: -38px; right: 22px; display: grid; place-items: center; min-width: 76px; padding: 10px 12px; border-radius: 18px; background: var(--forest-900); color: var(--cream-50); text-align: center; line-height: 1.1; box-shadow: var(--shadow-sm); }
+.event__day { font-family: var(--font-display); font-size: 1.9rem; font-weight: 600; color: var(--lime-400); }
+.event__month { font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.event h3 { margin: 0; }
+.event p { margin: 0; color: var(--ink-700); }
+.event__meta { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: .9rem; font-weight: 600; color: var(--ink-700); }
+.event__meta li { display: flex; gap: 8px; align-items: center; }
+.event__meta svg { width: 17px; height: 17px; flex: none; color: var(--leaf-600); }
+.event .link-arrow { margin-top: auto; padding-top: 6px; }
+.event__sample { background: var(--gold-300); color: var(--forest-950); }
+.event--past .event__media img { filter: grayscale(.6); }
+.event--past .event__date { background: var(--ink-500); }
+.event--past .event__day { color: var(--cream-50); }
+.events__empty { font-size: 1.05rem; }
+@media (max-width: 1200px) and (min-width: 961px) { .nav__link { padding: 10px 9px; font-size: .88rem; } .nav__cta { margin-left: 6px; } }
+@media (max-width: 960px) { .menu-open .nav__list li:nth-child(8) .nav__link { transition-delay: .55s; } .nav__link { font-size: 1.75rem; } }
